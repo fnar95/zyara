@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5911046005831839"
+     crossorigin="anonymous"></script>
+	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نماذج تبادل الزيارات المدرسية</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300796b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'%3E%3C/path%3E%3Cpolyline points='14 2 14 8 20 8'%3E%3C/polyline%3E%3Cline x1='16' y1='13' x2='8' y2='13'%3E%3C/line%3E%3Cline x1='16' y1='17' x2='8' y2='17'%3E%3C/line%3E%3C/svg%3E">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #e5e7eb; /* gray-200 */
+        }
+        .form-container {
+            width: 100%; /* Full width for responsiveness */
+            max-width: 210mm; /* A4 width for large screens */
+            margin: 2rem auto;
+            background: white;
+            padding: 7mm 15mm;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border: 1px solid #9ca3af; 
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden; 
+        }
+        .editable {
+            min-height: 24px;
+            padding: 4px;
+            border-radius: 2px;
+            border: 1px solid transparent;
+        }
+        .editable:hover {
+            border: 1px dashed #d1d5db;
+        }
+        .editable:focus {
+            outline: none;
+            border-color: #3b82f6; /* blue-500 */
+            background-color: #eff6ff; /* blue-50 */
+        }
+        .header-container .editable:focus {
+            background-color: #1a5f69;
+            border-color: #4db6ac;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        .form-container table th, 
+        .form-container table td {
+            border: 1px solid #000 !important;
+            padding: 4px;
+            text-align: center;
+            font-size: 12.5px;
+        }
+        .header-green-gradient {
+            background: linear-gradient(to bottom, #009688, #00796b);
+        }
+        .header-dark-teal {
+            background-color: #004d40;
+            color: white;
+        }
+        .section-title {
+            background-color: #00897b;
+            color: white;
+            font-weight: bold;
+            padding: 6px;
+            text-align: center;
+            margin-top: 0.75rem;
+            margin-bottom: 0;
+        }
+        .rating-cell {
+            cursor: pointer;
+        }
+        .rating-cell.selected {
+            background-color: #4caf50;
+            color: white;
+            font-weight: bold;
+        }
+        .signature-line {
+            border-bottom: 2px dotted #000;
+            min-height: 30px;
+            margin-top: 0.25rem;
+        }
+        .dotted-container {
+            border: 2px dashed #b0b0b0;
+            min-height: 40px;
+            padding: 6px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        .tab, .gender-tab {
+            transition: all 0.3s ease;
+        }
+        .form2-header-bg {
+            background-color: #0d3d44 !important;
+        }
+        .form2-header-gradient {
+            background: linear-gradient(to left, #009688, #4db6ac) !important;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                -webkit-text-size-adjust: 100%;
+            }
+            .form-container {
+                margin: 1rem 0;
+                padding: 15px;
+                min-height: auto;
+                border-left: none;
+                border-right: none;
+                border-radius: 0;
+            }
+            .form-container table th, 
+            .form-container table td {
+                font-size: 11px;
+                padding: 3px;
+            }
+        }
+        
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 0;
+            }
+            .p-4 > h1,
+            .p-4 > .instruction-box,
+            .gender-selector,
+            .tabs-container,
+            .controls,
+            .form-container.hidden,
+            .no-print {
+                display: none !important;
+            }
+            html, body, .p-4 {
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+            }
+            .form-container:not(.hidden) {
+                width: 210mm;
+                height: 297mm;
+                max-width: 210mm;
+                padding: 15mm;
+                margin: 0;
+                border: none;
+                box-shadow: none;
+                overflow: hidden;
+                box-sizing: border-box;
+                display: flex !important;
+                flex-direction: column !important;
+            }
+            .form-container:not(.hidden) .flex-grow {
+                flex-grow: 1 !important;
+            }
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            #form1 footer {
+                flex-direction: row !important;
+                align-items: flex-end !important;
+                justify-content: space-around !important;
+            }
+            #form1 footer > div {
+                margin-bottom: 0 !important;
+            }
+            #form2 .header-container, #form2 h2.form2-header-bg {
+                background-color: #0d3d44 !important;
+                color: white !important;
+            }
+            #form2 .form2-header-gradient {
+                background: linear-gradient(to left, #009688, #4db6ac) !important;
+            }
+            #form2 .text-teal-300 {
+                color: #4db6ac !important;
+            }
+            #form2 .header-container svg g,
+            #form2 .header-container svg text { 
+                 fill: white !important;
+            }
+            #form2 .header-container svg text[fill='#bdc3c7'] { 
+                 fill: #bdc3c7 !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+
+    <div class="p-4 md:p-8">
+        
+        <h1 class="text-2xl md:text-4xl text-center font-bold text-gray-800 mb-4">نماذج تبادل الزيارات المدرسية</h1>
+        
+        <div class="instruction-box max-w-4xl mx-auto bg-white rounded-xl shadow-lg border border-gray-200 p-6 my-8">
+            <div class="flex items-start space-x-4 rtl:space-x-reverse">
+                <div class="flex-shrink-0">
+                    <svg class="h-10 w-10 text-teal-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-gray-800 mb-2">طريقة الاستخدام</h2>
+                    <p class="text-gray-600 mb-3">اتبع الخطوات التالية لتعبئة وطباعة النموذج بكل سهولة:</p>
+                    <ul class="list-decimal list-inside text-gray-700 space-y-1">
+                        <li><strong>اختر الجنس:</strong> حدد ما إذا كنت تريد نماذج بصيغة المذكر (معلمين) أو المؤنث (معلمات).</li>
+                        <li><strong>اختر النموذج:</strong> تنقل بين "استمارة تبادل الزيارة" و "تقرير تبادل الزيارة".</li>
+                        <li><strong>تعبئة البيانات:</strong> انقر على أي حقل في النموذج للكتابة والتعديل مباشرة. في استمارة الزيارة، يمكنك أيضاً تعديل وحذف وإضافة بنود التقييم.</li>
+                        <li><strong>الطباعة:</strong> بعد الانتهاء، اضغط على زر "طباعة" لإعداد النموذج للطباعة على ورقة A4.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="gender-selector max-w-lg mx-auto bg-white rounded-lg shadow-md p-2 flex justify-center space-x-2 rtl:space-x-reverse mb-8">
+            <button id="gender-male-btn" class="gender-tab flex-1 text-center py-2 px-4 rounded-md font-semibold" onclick="setGender('male')">
+                نماذج مذكرة (معلمين)
+            </button>
+            <button id="gender-female-btn" class="gender-tab flex-1 text-center py-2 px-4 rounded-md font-semibold" onclick="setGender('female')">
+                نماذج مؤنثة (معلمات)
+            </button>
+        </div>
+
+        <div class="tabs-container max-w-lg mx-auto bg-white rounded-lg shadow-md p-2 flex justify-center space-x-2 rtl:space-x-reverse mb-8">
+            <button id="tab1-btn" class="tab flex-1 text-center py-2 px-4 rounded-md font-semibold bg-teal-600 text-white" onclick="showForm('form1', 'tab1-btn')">
+                استمارة تبادل الزيارة
+            </button>
+            <button id="tab2-btn" class="tab flex-1 text-center py-2 px-4 rounded-md font-semibold bg-gray-200 text-gray-700" onclick="showForm('form2', 'tab2-btn')">
+                تقرير تبادل الزيارة
+            </button>
+        </div>
+        
+        <div class="controls max-w-lg mx-auto bg-white rounded-lg shadow-md p-4 flex justify-center items-center mb-8">
+            <button onclick="window.print()" class="w-full md:w-auto bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-6 rounded-lg transition-transform transform hover:scale-105">
+                طباعة
+            </button>
+        </div>
+
+        <div id="form1" class="form-container">
+            <div class="header-green-gradient h-3 w-full absolute top-0 right-0"></div>
+            <header class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-inherit gap-4 mb-2 mt-2">
+                <div class="text-center">
+                    <h2 contenteditable="true" class="editable font-bold text-md">المملكة العربية السعودية</h2>
+                    <h2 contenteditable="true" class="editable font-bold text-md">وزارة التعليم</h2>
+                    <h3 contenteditable="true" class="editable text-sm">الإدارة العامة للتعليم بمنطقة ...</h3>
+                    <h3 contenteditable="true" class="editable text-sm">مدرسة ...</h3>
+                </div>
+                <div class="flex flex-col items-center">
+                    <svg width="130" height="70" viewBox="0 0 130 70" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#34d399;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <g fill="url(#logoGradient)">
+                            <circle cx="25" cy="10" r="5"/><circle cx="37" cy="10" r="5"/>
+                            <circle cx="25" cy="22" r="4.5"/><circle cx="37" cy="22" r="4.5"/>
+                            <circle cx="25" cy="34" r="4"/><circle cx="37" cy="34" r="4"/>
+                            <circle cx="49" cy="14" r="4"/><circle cx="49" cy="26" r="3.5"/>
+                            <circle cx="65" cy="20" r="3"/>
+                            <circle cx="81" cy="14" r="4"/><circle cx="81" cy="26" r="3.5"/>
+                            <circle cx="93" cy="10" r="5"/><circle cx="105" cy="10" r="5"/>
+                            <circle cx="93" cy="22" r="4.5"/><circle cx="105" cy="22" r="4.5"/>
+                            <circle cx="93" cy="34" r="4"/><circle cx="105" cy="34" r="4"/>
+                        </g>
+                        <text x="65" y="52" font-family="Tajawal, sans-serif" font-size="14" font-weight="bold" fill="#059669" text-anchor="middle">وزارة التعليم</text>
+                        <text x="65" y="65" font-family="sans-serif" font-size="9" fill="#6b7280" text-anchor="middle">Ministry of Education</text>
+                    </svg>
+                </div>
+                <div class="border-2 border-black p-2 font-bold text-center text-sm">
+                    استمارة تبادل زيارة
+                </div>
+            </header>
+            
+            <table class="mb-2">
+                <thead>
+                    <tr class="header-dark-teal">
+                        <th data-gender-male="المعلم الزائر" data-gender-female="المعلمة الزائرة">المعلم الزائر</th>
+                        <th data-gender-male="المعلم المزار" data-gender-female="المعلمة المزارة">المعلم المزار</th>
+                        <th>الصف والفصل</th>
+                        <th>المادة</th>
+                        <th>تاريخ الزيارة</th>
+                        <th>موضوع الدرس</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true" class="editable"></td>
+                        <td contenteditable="true" class="editable"></td>
+                        <td contenteditable="true" class="editable"></td>
+                        <td contenteditable="true" class="editable"></td>
+                        <td contenteditable="true" class="editable" id="form1-date"></td>
+                        <td contenteditable="true" class="editable"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-title">عناصر التقويم</h3>
+            <table>
+                <thead>
+                    <tr class="header-dark-teal">
+                        <th class="w-8">م</th>
+                        <th style="width: 45%;">المجال</th>
+                        <th class="w-16">ممتاز</th>
+                        <th class="w-16">جيد جداً</th>
+                        <th class="w-16">جيد</th>
+                        <th class="w-16">لم ينفذ</th>
+                        <th>ملاحظات</th>
+                        <th class="no-print">إجراءات</th>
+                    </tr>
+                </thead>
+                <tbody id="evaluation-table">
+                </tbody>
+            </table>
+            <div class="text-center mt-4 no-print">
+                <button onclick="addRow()" class="bg-teal-600 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded-lg transition-transform transform hover:scale-105">
+                    + إضافة مجال جديد
+                </button>
+            </div>
+            
+            <div class="mt-1">
+                <h3 class="font-bold text-md mb-1">الملاحظات الإيجابية:</h3>
+                <div contenteditable="true" class="editable dotted-container w-full"></div>
+            </div>
+            <div class="mt-1">
+                <h3 class="font-bold text-md mb-1">التوصيات:</h3>
+                <div contenteditable="true" class="editable dotted-container w-full"></div>
+            </div>
+
+            <div class="flex-grow"></div> 
+            
+            <footer class="mt-auto flex flex-col md:flex-row justify-around items-center md:items-end w-full">
+                <div class="text-center mb-6 md:mb-0">
+                    <p class="font-bold" data-gender-male="المعلم الزائر" data-gender-female="المعلمة الزائرة">المعلم الزائر</p>
+                    <div contenteditable="true" class="editable signature-line min-w-[180px]"></div>
+                </div>
+                <div class="text-center mb-6 md:mb-0">
+                    <p class="font-bold" data-gender-male="المعلم المزار" data-gender-female="المعلمة المزارة">المعلم المزار</p>
+                    <div contenteditable="true" class="editable signature-line min-w-[180px]"></div>
+                </div> 
+                 <div class="text-center">
+                    <p class="font-bold" data-gender-male="مدير المدرسة" data-gender-female="مديرة المدرسة">مدير المدرسة</p>
+                    <div contenteditable="true" class="editable signature-line min-w-[180px]"></div>
+                </div>
+            </footer>
+            <div class="header-green-gradient h-3 w-full absolute bottom-0 right-0"></div>
+        </div>
+
+        <div id="form2" class="form-container hidden">
+            <div class="header-container text-white p-4 rounded-b-3xl relative form2-header-bg">
+                <div class="absolute top-0 right-0 h-2 w-full form2-header-gradient"></div>
+                <header class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-4">
+                    <div class="text-right flex-grow">
+                        <div contenteditable="true" class="editable font-semibold text-sm">الإدارة العامة للتعليم بمنطقة الرياض</div>
+                        <h3 contenteditable="true" class="editable text-sm font-semibold text-teal-300">مكتب التعليم ...</h3>
+                        <h3 contenteditable="true" class="editable text-md font-bold">اسم المدرسة ...</h3>
+                    </div>
+                    <div class="flex-shrink-0">
+                        <svg width="140" height="70" viewBox="0 0 140 70" xmlns="http://www.w3.org/2000/svg">
+                            <g fill="white">
+                                <circle cx="30" cy="10" r="5"/><circle cx="42" cy="10" r="5"/>
+                                <circle cx="30" cy="22" r="4.5"/><circle cx="42" cy="22" r="4.5"/>
+                                <circle cx="30" cy="34" r="4"/><circle cx="42" cy="34" r="4"/>
+                                <circle cx="54" cy="14" r="4"/><circle cx="54" cy="26" r="3.5"/>
+                                <circle cx="70" cy="20" r="3"/>
+                                <circle cx="86" cy="14" r="4"/><circle cx="86" cy="26" r="3.5"/>
+                                <circle cx="98" cy="10" r="5"/><circle cx="110" cy="10" r="5"/>
+                                <circle cx="98" cy="22" r="4.5"/><circle cx="110" cy="22" r="4.5"/>
+                                <circle cx="98" cy="34" r="4"/><circle cx="110" cy="34" r="4"/>
+                            </g>
+                            <text x="70" y="52" font-family="Tajawal, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">وزارة التعليم</text>
+                            <text x="70" y="65" font-family="sans-serif" font-size="9" fill="#bdc3c7" text-anchor="middle">Ministry of Education</text>
+                        </svg>
+                    </div>
+                </header>
+            </div>
+
+            <div class="text-center -mt-8 mb-4 z-10 relative">
+                <h2 class="inline-block text-white font-bold py-3 px-6 md:px-10 rounded-xl border-2 border-teal-400 form2-header-bg" data-gender-male="تقرير تبادل زيارة بين المعلمين" data-gender-female="تقرير تبادل زيارة بين المعلمات">تقرير تبادل زيارة بين المعلمين</h2>
+            </div>
+            
+            <table class="mb-4">
+                <tbody>
+                    <tr>
+                        <td class="font-bold bg-gray-200" data-gender-male="المعلم المزار" data-gender-female="المعلمة المزارة">المعلم المزار</td>
+                        <td colspan="2" contenteditable="true" class="editable"></td>
+                        <td class="font-bold bg-gray-200">التاريخ</td>
+                        <td colspan="2">
+                            <div class="flex justify-around items-center">
+                                <span contenteditable="true" class="editable w-1/3" id="form2-day"></span> /
+                                <span contenteditable="true" class="editable w-1/3" id="form2-month"></span> /
+                                <span contenteditable="true" class="editable w-1/3" id="form2-year"></span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="font-bold bg-yellow-100">المادة</td>
+                        <td contenteditable="true" class="editable w-1/4"></td>
+                        <td class="font-bold bg-yellow-100">الصف</td>
+                        <td contenteditable="true" class="editable w-1/6"></td>
+                        <td class="font-bold bg-yellow-100">المدرسة</td>
+                        <td contenteditable="true" class="editable w-1/3"></td>
+                    </tr> 
+                     <tr>
+                        <td class="font-bold bg-gray-200">الموضوع</td>
+                        <td colspan="5" contenteditable="true" class="editable"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-title">الأهداف العامة</h3>
+            <table class="my-4">
+                <tbody>
+                    <tr><td class="w-8">١</td><td class="text-right" data-gender-male="تبادل الخبرات التربوية بين المعلمين." data-gender-female="تبادل الخبرات التربوية بين المعلمات.">تبادل الخبرات التربوية بين المعلمين.</td></tr>
+                    <tr><td class="w-8">٢</td><td class="text-right">الاطلاع على أساليب واستراتيجيات التدريس المختلفة.</td></tr>
+                    <tr><td class="w-8">٣</td><td class="text-right">تحسين الأداء التدريسي من خلال الاستفادة من الممارسات الناجحة.</td></tr>
+                    <tr><td class="w-8">٤</td><td class="text-right" data-gender-male="تعزيز التعاون والتواصل بين المعلمين في بيئة العمل." data-gender-female="تعزيز التعاون والتواصل بين المعلمات في بيئة العمل.">تعزيز التعاون والتواصل بين المعلمين في بيئة العمل.</td></tr>
+                    <tr><td class="w-8">٥</td><td class="text-right" data-gender-male="متابعة طرق تفاعل الطلاب مع الدروس واستراتيجيات التقييم." data-gender-female="متابعة طرق تفاعل الطالبات مع الدروس واستراتيجيات التقييم.">متابعة طرق تفاعل الطلاب مع الدروس واستراتيجيات التقييم.</td></tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-title" data-gender-male="المعلمون الزائرون" data-gender-female="المعلمات الزائرات">المعلمون الزائرون</h3>
+            <table>
+                <thead>
+                    <tr class="header-dark-teal">
+                        <th class="w-8">م</th>
+                        <th data-gender-male="اسم المعلم" data-gender-female="اسم المعلمة">اسم المعلم</th>
+                        <th>التخصص</th>
+                        <th>التوقيع</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>١</td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
+                    <tr><td>٢</td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
+                    <tr><td>٣</td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
+                    <tr><td>٤</td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
+                    <tr><td>٥</td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td><td contenteditable="true" class="editable"></td></tr>
+                </tbody>
+            </table>
+
+            <div class="flex-grow"></div> 
+            
+             <footer class="mt-auto flex justify-start w-full items-end"> 
+                 <div class="text-center">
+                    <p class="font-bold" data-gender-male="مدير المدرسة" data-gender-female="مديرة المدرسة">مدير المدرسة</p>
+                    <div contenteditable="true" class="editable min-w-[250px] border-b-2 border-dotted border-black">.........................................</div>
+                </div>
+            </footer> 
+            
+             <div class="header-green-gradient h-3 w-full absolute bottom-0 right-0"></div>
+         </div>
+         
+    </div>
+
+    <footer class="text-center p-4 mt-8 text-gray-600 no-print">
+        <p class="font-semibold">تطوير الاستاذ فاضل المبارك</p>
+        <p>
+            <a href="https://x.com/Fnar9595" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 hover:underline">
+                تابعوني على تويتر
+            </a>
+        </p>
+    </footer>
+    <script>
+        let currentGender = 'male';
+
+        const evaluationItems = [
+            { male: "وضوح أهداف الدرس", female: "وضوح أهداف الدرس" },
+            { male: "تسلسل خطوات الدرس", female: "تسلسل خطوات الدرس" },
+            { male: "وضوح وسلامة الصوت", female: "وضوح وسلامة الصوت" },
+            { male: "مناسبة طريقة التدريس", female: "مناسبة طريقة التدريس" },
+            { male: "جودة الأسئلة التي تلقى على الطلاب", female: "جودة الأسئلة التي تلقى على الطالبات" },
+            { male: "مهارة توزيع الأسئلة على الطلاب", female: "مهارة توزيع الأسئلة على الطالبات" },
+            { male: "تقبل المعلم لمشاركات وآراء الطلاب", female: "تقبل المعلمة لمشاركات وآراء الطالبات" },
+            { male: "جلب انتباه الطلاب", female: "جلب انتباه الطالبات" },
+            { male: "استخدام عبارات التشجيع والتعزيز للطلاب", female: "استخدام عبارات التشجيع والتعزيز للطالبات" },
+            { male: "تمكن المعلم من المادة العلمية", female: "تمكن المعلمة من المادة العلمية" },
+            { male: "استثمار وقت الحصة", female: "استثمار وقت الحصة" },
+            { male: "شخصية المعلم", female: "شخصية المعلمة" },
+            { male: "مظهر المعلم", female: "مظهر المعلمة" },
+            { male: "ضبط الطلاب", female: "ضبط الطالبات" },
+            { male: "تعزيز وسيلة تعليمية", female: "تعزيز وسيلة تعليمية" },
+            { male: "تنفيذ نشاطات المادة", female: "تنفيذ نشاطات المادة" },
+            { male: "إتاحة الفرصة للنقد والتذوق", female: "إتاحة الفرصة للنقد والتذوق" },
+            { male: "توظيف مصادر التعلم لخدمة الدرس", female: "توظيف مصادر التعلم لخدمة الدرس" },
+            { male: "تقييم الدرس في نهاية الحصة", female: "تقييم الدرس في نهاية الحصة" },
+            { male: "الاحتفاظ بالنتائج المميزة من أعمال الطلاب", female: "الاحتفاظ بالنتائج المميزة من أعمال الطالبات" }
+        ];
+
+        function generateTableRows() {
+            const tableBody = document.getElementById('evaluation-table');
+            if(!tableBody) return;
+            tableBody.innerHTML = '';
+            evaluationItems.forEach((item, index) => {
+                const row = document.createElement('tr');
+                const itemText = item[currentGender];
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td contenteditable="true" class="editable text-right">${itemText}</td>
+                    <td class="rating-cell" data-row="${index}"></td>
+                    <td class="rating-cell" data-row="${index}"></td>
+                    <td class="rating-cell" data-row="${index}"></td>
+                    <td class="rating-cell" data-row="${index}"></td>
+                    <td contenteditable="true" class="editable"></td>
+                    <td class="no-print"><button onclick="deleteRow(this)" class="text-red-500 hover:text-red-700 font-bold px-2">حذف</button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+             addRatingListeners();
+        }
+
+        function addRatingListeners() {
+            document.querySelectorAll('#evaluation-table .rating-cell').forEach(cell => {
+                // Remove old listener to prevent duplication
+                const newCell = cell.cloneNode(true);
+                cell.parentNode.replaceChild(newCell, cell);
+
+                newCell.addEventListener('click', () => {
+                    const row = newCell.closest('tr');
+                    row.querySelectorAll('.rating-cell').forEach(c => {
+                        c.classList.remove('selected');
+                        c.textContent = '';
+                    });
+                    newCell.classList.add('selected');
+                    newCell.textContent = '✓';
+                });
+            });
+        }
+        
+        function renumberRows() {
+            const tableBody = document.getElementById('evaluation-table');
+            const rows = tableBody.querySelectorAll('tr');
+            rows.forEach((row, index) => {
+                row.cells[0].textContent = index + 1;
+            });
+        }
+
+        function deleteRow(btn) {
+            const row = btn.closest('tr');
+            row.remove();
+            renumberRows();
+        }
+
+        function addRow() {
+            const tableBody = document.getElementById('evaluation-table');
+            const newIndex = tableBody.rows.length;
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${newIndex + 1}</td>
+                <td contenteditable="true" class="editable text-right">مجال جديد...</td>
+                <td class="rating-cell" data-row="${newIndex}"></td>
+                <td class="rating-cell" data-row="${newIndex}"></td>
+                <td class="rating-cell" data-row="${newIndex}"></td>
+                <td class="rating-cell" data-row="${newIndex}"></td>
+                <td contenteditable="true" class="editable"></td>
+                <td class="no-print"><button onclick="deleteRow(this)" class="text-red-500 hover:text-red-700 font-bold px-2">حذف</button></td>
+            `;
+            tableBody.appendChild(row);
+            addRatingListeners();
+        }
+
+        function showForm(formId, tabId) {
+            document.getElementById('form1').classList.add('hidden');
+            document.getElementById('form2').classList.add('hidden');
+            document.getElementById(formId).classList.remove('hidden');
+
+            document.getElementById('tab1-btn').classList.remove('bg-teal-600', 'text-white');
+            document.getElementById('tab1-btn').classList.add('bg-gray-200', 'text-gray-700');
+            document.getElementById('tab2-btn').classList.remove('bg-teal-600', 'text-white');
+            document.getElementById('tab2-btn').classList.add('bg-gray-200', 'text-gray-700');
+            
+            document.getElementById(tabId).classList.add('bg-teal-600', 'text-white');
+            document.getElementById(tabId).classList.remove('bg-gray-200', 'text-gray-700');
+        }
+
+        function setGender(gender) {
+            currentGender = gender;
+            
+            const maleBtn = document.getElementById('gender-male-btn');
+            const femaleBtn = document.getElementById('gender-female-btn');
+            
+            if (gender === 'male') {
+                maleBtn.classList.add('bg-teal-600', 'text-white');
+                maleBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                femaleBtn.classList.remove('bg-teal-600', 'text-white');
+                femaleBtn.classList.add('bg-gray-200', 'text-gray-700');
+            } else {
+                femaleBtn.classList.add('bg-teal-600', 'text-white');
+                femaleBtn.classList.remove('bg-gray-200', 'text-gray-700');
+                maleBtn.classList.remove('bg-teal-600', 'text-white');
+                maleBtn.classList.add('bg-gray-200', 'text-gray-700');
+            }
+            
+            // Update all elements with data-gender attributes
+            document.querySelectorAll('[data-gender-male], [data-gender-female]').forEach(el => {
+                const text = el.getAttribute(gender === 'male' ? 'data-gender-male' : 'data-gender-female');
+                if (text) {
+                    el.textContent = text;
+                }
+            });
+
+            // Regenerate table rows for form 1 with new gender text
+            generateTableRows();
+        }
+
+        function setDates() {
+            const today = new Date();
+            const day = String(today.getDate()).padStart(2, '0');
+            const month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+            const year = today.getFullYear();
+            
+            const hijriDate = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', {day: '2-digit', month: '2-digit', year: 'numeric'}).format(today).split(' ')[0];
+            const [hDay, hMonth, hYear] = hijriDate.split('/');
+            
+            const fullDate = `${hYear}/${hMonth}/${hDay} هـ الموافق ${year}/${month}/${day} م`;
+            
+            const form1DateEl = document.getElementById('form1-date');
+            if (form1DateEl) form1DateEl.textContent = fullDate;
+            
+            const form2DayEl = document.getElementById('form2-day');
+            const form2MonthEl = document.getElementById('form2-month');
+            const form2YearEl = document.getElementById('form2-year');
+            
+            if (form2DayEl) form2DayEl.textContent = hDay;
+            if (form2MonthEl) form2MonthEl.textContent = hMonth;
+            if (form2YearEl) form2YearEl.textContent = hYear;
+        }
+
+        // Initial setup on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            setGender('male'); // Default to male
+            setDates();
+        });
+    </script>
+
+</body>
+</html>
